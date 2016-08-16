@@ -2,10 +2,12 @@
 
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.2'
+
+        classpath 'com.novoda:bintray-release:0.3.4'
     }
 }
 
@@ -22,7 +24,7 @@ ext {
 
 allprojects {
     repositories {
-        mavenCentral()
+        jcenter()
     }
 }
 
@@ -35,7 +37,7 @@ allprojects {
     group = GROUP
 
     repositories {
-        mavenCentral()
+        jcenter()
     }
 }
 
