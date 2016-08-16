@@ -2,27 +2,29 @@
 
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.2'
+
+        classpath 'com.novoda:bintray-release:0.3.4'
     }
 }
 
 // To avoid manually setting the same values in all Android modules, set the value on the root
 // project and then reference this from the modules
 ext {
-    compileSdkVersion = 23
+    compileSdkVersion = 24
     minSdkVersion = 9
     targetSdkVersion = 24
-    buildToolsVersion = "23.0.1"
+    buildToolsVersion = "24.0.1"
 
     playServices = '9.4.0'
 }
 
 allprojects {
     repositories {
-        mavenCentral()
+        jcenter()
     }
 }
 
@@ -35,7 +37,7 @@ allprojects {
     group = GROUP
 
     repositories {
-        mavenCentral()
+        jcenter()
     }
 }
 
