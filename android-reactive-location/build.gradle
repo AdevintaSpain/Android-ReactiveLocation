@@ -6,8 +6,8 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 23
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
     }
 
     compileOptions {
@@ -16,26 +16,10 @@ android {
     }
 }
 
-//TODO: local maven deployment
-
 dependencies {
-    compile 'com.google.android.gms:play-services-location:8.4.0'
-    compile 'io.reactivex:rxjava:1.1.5'
+    compile "com.google.android.gms:play-services-location:$rootProject.ext.playServices"
+    compile "com.google.android.gms:play-services-maps:$rootProject.ext.playServices"
+    compile "com.google.android.gms:play-services-places:$rootProject.ext.playServices"
+
+    compile 'io.reactivex:rxjava:1.1.9'
 }
-
-// Comment this to deploy to local maven repository
-apply from: '../maven_push.gradle'
-
-
-//TODO: clean up
-//This is for local maven deployment
-
-//apply plugin: 'maven'
-//uploadArchives {
-//    repositories {
-//        mavenDeployer {
-//            repository url: 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
-//        }
-//    }
-//}
-//task install(dependsOn: uploadArchives)
