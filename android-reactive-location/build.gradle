@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
 group = 'com.schibstedspain.android'
-version = '0.10.0'
+version = '0.10.1'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -34,8 +34,8 @@ dependencies {
 publish {
     userOrg = 'schibstedspain'
     groupId = 'com.schibstedspain.android'
-    artifactId = 'android-reactive-locatipon'
-    publishVersion = '0.10.0'
+    artifactId = 'android-reactive-location'
+    publishVersion = '0.10.1'
     desc = 'Small library that wraps Google Play Services API in brilliant RxJava Observables reducing boilerplate to minimum.'
     website = 'https://github.com/SchibstedSpain/Android-ReactiveLocation'
 }
